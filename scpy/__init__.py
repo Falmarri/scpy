@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 '''
 Created on Nov 14, 2010
 
@@ -22,7 +22,7 @@ _remoteSites ={}
 options = ''
 
 credentials = {}
-expected = ['The authenticity of host', 'Permission denied', 'password', pexpect.EOF, pexpect.TIMEOUT]
+expected = ['The authenticity of host', 'Permission denied', 'Password', pexpect.EOF, pexpect.TIMEOUT]
 
 _ERROR = 1
 _DENIED = 2
@@ -39,7 +39,8 @@ def scp( localfile, remotehost, remotepath, password=None, opts = '' ):
     passw = password or _pass_request(remotehost)
 
     scpcmd = "scp {0} {1} {2}:{3}".format(opts, localfile, remotehost, remotepath )
-
+    import ipdb
+    ipdb.set_trace()
     child = pexpect.spawn( scpcmd)
     index = child.expect( expected )
     if index == 0:

@@ -21,7 +21,7 @@ setup(
     author = "Falmarri",
     author_email = "psychicsurgeon@gmail.com",
     description = "File/Directory syncing over scp",
-    long_description=open('README','r').read(),
+    long_description=open('README.rst','r').read(),
     license = "GPL",
     keywords = "scp sync autosync",
     url = "http://weaknweary.blogspot.com/2010/10/python-enhancement-to-scp.html",   # project home page, if any
